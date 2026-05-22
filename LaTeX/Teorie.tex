@@ -49,6 +49,24 @@ $\bullet$	Prin definiție, partea fracționară a numărului real $x$ este $\{x\
   \item Exponentul numărului natural prim $p$ din descompunerea în factori primi a numărului $n!$ este:\[ \left\lfloor \frac{n}{p}  \right\rfloor + \left\lfloor \frac{n}{p^2} \right\rfloor +\left\lfloor \frac{n}{p^3}\right\rfloor + \ldots \]
 \end{Properties}
 
+\section{Șiruri și Progresii}
+
+\subsection{Progresii aritmetice}
+\begin{itemize}
+    \item \textbf{Definiție:} \[ a_n = a_{n-1} + r \]
+    \item \textbf{Termen general:} \[ a_n = a_1 + (n-1)r \]
+    \item \textbf{Suma primilor $n$ termeni:} \[ S_n = \frac{(a_1 + a_n) \cdot n}{2} \]
+    \item \textbf{Proprietate:} \[ a_n = \frac{a_{n-1} + a_{n+1}}{2} \]
+\end{itemize}
+
+\subsection{Progresii geometrice}
+\begin{itemize}
+    \item \textbf{Definiție:} \[ b_n = b_{n-1} \cdot \rho \]
+    \item \textbf{Termen general:} \[ b_n = b_1 \cdot \rho^{n-1} \]
+    \item \textbf{Suma primilor $n$ termeni:} \[ S_n = b_1 \cdot \frac{\rho^n - 1}{\rho - 1} \quad ( \rho \neq 1) \]
+    \item \textbf{Proprietate:} \[ b_n^2 = b_{n-1} \cdot b_{n+1} \]
+\end{itemize}
+
 \section{Ecuația de gradul II}
 Fie $a, b, c \in \mathbb{R}, a\neq 0$. Se numește ecuația de gradul II: $ax^2 +bx+c=0$.
 \subsection{Rezolvarea ecuației de gradul II}
@@ -84,6 +102,31 @@ $ \left\{
   \item $\log_ab = \frac{1}{\log_ba}, \forall a, b > 0; a, b \neq 1$.
   \end{Properties}
   Consecință: $\log_ax = \frac{\lg x }{\lg a} = \frac{\ln x }{\ln a}$
+
+  \section{Combinatorică}
+
+\begin{align*}
+    &\textbf{Permutări:} \quad P_n = n! = 1 \cdot 2 \cdot \dots \cdot n \\
+    &\textbf{Aranjamente:} \quad A_n^k = \frac{n!}{(n-k)!} \\
+    &\textbf{Combinări:} \quad C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
+\end{align*}
+
+\subsection{Binomul lui Newton}
+\[ (a+b)^n = \sum_{k=0}^{n} C_n^k a^{n-k} b^k \]
+\begin{itemize}
+    \item \textbf{Termenul general (rang $k+1$):} \[ T_{k+1} = C_n^k a^{n-k} b^k \]
+\end{itemize}
+\section{Ecuații}
+
+\subsection{Ecuații Iraționale}
+\[ \sqrt[2n]{f(x)} = g(x) \implies \text{Condiții de existență (C.E.): } f(x) \ge 0, \, g(x) \ge 0 \]
+
+\subsection{Ecuații Exponențiale}
+\[ a^{f(x)} = a^{g(x)} \iff f(x) = g(x) \quad (a > 0, \, a \neq 1) \]
+
+\subsection{Ecuații Logaritmice}
+\[ \log_{a} f(x) = \log_{a} g(x) \implies f(x) = g(x) \]
+\[ \text{C.E.: } f(x) > 0, \, g(x) > 0, \, a > 0, \, a \neq 1 \]
   \section{Numere Complexe}
 
 Se definește mulțimea numerelor complexe ca: \quad
@@ -229,6 +272,21 @@ $$\overrightarrow{u} \perp \overrightarrow{v} \Leftrightarrow \langle\overrighta
 \item $\hat{i} \cdot \hat{i} = 1 \quad \hat{j} \cdot \hat{j} = 1 \quad \hat{k} \cdot \hat{k} = 1 \quad \hat{i} \cdot \hat{j} = \hat{i}\cdot\hat{k}=\hat{j}\cdot\hat{i}=\hat{j}\cdot\hat{k}=\hat{k}\cdot\hat{i}=\hat{k}\cdot\hat{j}=0$.
 \item $\langle\overrightarrow{0}, \overrightarrow{u}\rangle = 0, \forall \overrightarrow{u}$ vector.
 \end{Properties}
+\section{Geometrie Analitică}
+Fie punctele $A(x_A, y_A)$ și $B(x_B, y_B)$.
+
+\begin{itemize}
+    \item \textbf{Distanța $AB$:} $ AB = \sqrt{(x_B - x_A)^2 + (y_B - y_A)^2} $
+    \item \textbf{Mijlocul segmentului:} $ X_M = \frac{x_A + x_B}{2}, \quad Y_M = \frac{y_A + y_B}{2} $
+    \item \textbf{Panta dreptei ($m$):} $ m = \frac{y_B - y_A}{x_B - x_A} $
+    \item \textbf{Ecuația dreptei (punct și pantă):} $ y - y_A = m(x - x_A) $
+    \item \textbf{Ecuația generală a dreptei:} $ ax + by + c = 0 $
+    \item \textbf{Panta din ecuația generală:} $ m = -\frac{a}{b} \quad (b \neq 0) $
+    \item \textbf{Condiția ca un punct $M(x_0, y_0) \in \delta$:} $ ax_0 + by_0 + c = 0 $
+    \item \textbf{Drepte paralele:} $ \delta_1 \parallel \delta_2 \iff m_1 = m_2 $
+    \item \textbf{Drepte perpendiculare:} $ \delta_1 \perp \delta_2 \iff m_1 \cdot m_2 = -1 $
+\end{itemize}
+
 \section{Trigonometrie}
 \begin{wrapfigure}[8]{l}{0.3\textwidth}
 \begin{tikzpicture}[scale=1.5]
